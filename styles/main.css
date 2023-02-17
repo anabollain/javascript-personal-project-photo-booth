@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open-sans', sans-serif;
+}
+
+.body{
+    /*General properties*/
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/background.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+
+/*HEADER*/
+
+.header{
+    /*General properties*/
+    width: 100vw;
+    height: 10vh;
+    padding: 25px;
+    /*Display*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title{
+    /*General properties*/
+    color: white;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.header__settings--btn{
+    /*General properties*/
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px 20px 15px 20px;
+    background-color: white;
+    border: none;
+    border-radius: 25px;
+}
+
+.header__settings--btn:hover{
+    background-color: rgba(255, 255, 255, 0.667);
+}
+
+/*FORM*/
+.form{
+    /*General properties*/
+    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.923);
+    /*Position*/
+    position: absolute;
+    top: 18vh;
+    right: 5vw;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__title{
+    font-size: 16px;
+}
+
+.form__input{
+    cursor: pointer;
+}
+
+.form__label{
+    /*General properties*/
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.form__green{
+    /*General properties*/
+    border: none;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form__range{
+    /*General properties*/
+    width: 100%;
+    font-size: 13px;
+    margin-bottom: 15px;
+    /*Display*/
+    display: flex;
+    justify-content: space-between;
+}
+
+/*MAIN*/
+
+.main{
+    /*General properties*/
+    height: 90vh;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.webcam{
+    /*General properties*/
+    transform: scale(40%);
+    /*Position*/
+    position: absolute;
+    top: -15%;
+    right: -10%;
+    display: none;
+}
+
+/*CANVAS*/
+.canvas{
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.canvas__frame{
+    /*General properties*/
+    transform: scale(80%);
+    padding: 10px 10px 80px 10px;
+    background-color: white;
+}
+
+.canvas__btn{
+    /*General properties*/
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: white;
+    border: none;
+    font-size: 20px;
+    color: rgb(217, 66, 32);
+    transform: translateY(-50%);
+}
+
+.canvas__btn:hover{
+    background-color: rgba(255, 255, 255, 0.814);
+}
+
+
+/*VIDEO*/
+.video{
+    /*Display*/
+    display: flex;
+    gap: 30px;
+}
+
+/*ASIDE*/
+
+.aside{
+    /*General properties*/
+    width: 20vw;
+    /*Position*/
+    position: absolute;
+    top: 15vh;
+    left: 0;
+}
+
+.album{
+    /*General properties*/
+    max-height: 80vh;
+    padding: 20px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    /*Display*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.album__photo{
+    /*General properties*/
+    width: 200px;
+    min-height: 200px;
+    padding: 5px 5px 40px 5px;
+    background-color: white;
+    box-shadow: rgba(183, 183, 204, 0.497) 0px 7px 29px 0px;
+    /*Position*/
+    position: relative;
+}
+
+.album__photo--img{
+    /*General properties*/
+    width: 100%;
+    height: 100%;
+}
+
+.album__photo--icon{
+    /*General properties*/
+    color: rgb(217, 66, 32);
+    font-size: 14px;
+    text-decoration: none;
+    /*Position*/
+    position: absolute;
+    left: 15px;
+    bottom: 15px;
+}
+
+.album__photo--icon:hover{
+    color: rgb(111, 33, 15);
+}
+
+.album__photo--delete{
+    /*General properties*/
+    cursor: pointer;
+    color: rgb(217, 66, 32);
+    font-size: 14px;
+    /*Position*/
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+}
+
+.album__photo--delete:hover{
+    color: rgb(111, 33, 15);
+}
+
+.js-hidden{
+    display: none;
+}
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Rubik:wght@400;500&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>Photo Booth</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__title">Photo Booth</h1>
+        <div class="settings">
+            <button class="header__settings--btn js-settings-btn">Settings</button>
+                <form class="form js-form js-hidden">
+                    <h2 class="form__title">Choose an effect</h2>
+                        <div>
+                            <input type="radio" id="none" value="none" name="effect" class="form__input js-effect-radio" checked>
+                            <label for="none" class="form__label">None</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="red" value="red" name="effect" class="form__input js-effect-radio">
+                            <label for="red" class="form__label">Red</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="rgb" value="rgb" name="effect" class="form__input js-effect-radio">
+                            <label for="rgb" class="form__label">Rgb</label>
+                        </div>
+                        <fieldset class="form__green">
+                            <div>
+                                <input type="radio" id="green" value="green" name="effect" class="form__input js-effect-radio">
+                                <label for="green" class="form__label">Green Sceen</label>
+                            </div>
+                            <div class="js-rgb">
+                                <div class="form__range">
+                                    <label for="rmin">Red Min:</label>
+                                    <input type="range" min=0 max=255 name="rmin" class="form__input" disabled>
+                                </div>
+                                <div class="form__range">
+                                    <label for="rmax">Red Max:</label>
+                                    <input type="range" min=0 max=255 name="rmax" class="form__input" disabled>
+                                </div>
+                                <div class="form__range">
+                                    <label for="gmin">Green Min:</label>
+                                    <input type="range" min=0 max=255 name="gmin" class="form__input" disabled>
+                                </div>
+                                <div class="form__range">
+                                    <label for="gmax">Green Max:</label>
+                                    <input type="range" min=0 max=255 name="gmax" class="form__input" disabled>
+                                </div>
+                                <div class="form__range">
+                                    <label for="bmin">Blue Min:</label>
+                                    <input type="range" min=0 max=255 name="bmin" disabled>
+                                </div>
+                                <div class="form__range">
+                                    <label for="bmax">Blue Max:</label>
+                                    <input type="range" min=0 max=255 name="bmax" disabled>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div>
+                            <input type="checkbox" id="ghost" value="ghost" name="effect" class="form__input js-effect-checkbox">
+                            <label for="ghost" class="form__label">Ghost</label>
+                        </div>
+                </form>
+        </div>
+    </header>
+    <main class="main js-photobooth">
+        <section class="webcam">
+            <video class="webcam__insert js-webcam-player"></video>
+        </section>
+        <section class="canvas">
+            <canvas class="canvas__frame js-canvas"></canvas>
+            <button class="canvas__btn js-photo-btn"><i class="fa-solid fa-camera"></i></button>
+            <audio class="js-audio-snap" src="./audio/snap.mp3" hidden></audio>
+        </section>
+    </main>
+    <aside class="aside">
+        <div class="album js-photo-frame"></div>
+    </aside>
+    
+    <script src="./main.js"></script>
+</body>
+
+</html>
